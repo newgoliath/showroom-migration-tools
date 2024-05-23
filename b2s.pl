@@ -1,4 +1,9 @@
-#$/usr/bin/perl
+#!/usr/bin/perl
+
+# change bookbag/workshop/modules.yaml to nav.adoc
+# emits nav.adoc file to stdout
+# example: ~/Development/showroom-migration-tools/b2s.pl bookbag-aro-mobb/workshop/modules.yaml
+
 use strict;
 use warnings;
 
@@ -6,7 +11,7 @@ use YAML qw(LoadFile);
 use Data::Dumper qw(Dumper);
 local $YAML::Preserve = 1;
 
-my $source_filename =  or die "Usage: $0 YAML-FILE\n";
+my $source_filename = $ARGV[0] or die "Usage: $0 YAML-FILE\n";
 
 my $data = LoadFile($source_filename);
 

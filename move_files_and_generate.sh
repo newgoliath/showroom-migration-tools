@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# moves around files from bookbag to antora
 #
 SRC="$HOME/Development/bookbag-aro-mobb/workshop/content"
 DEST="$HOME/Development/aro-ilt/documentation/modules/ROOT"
