@@ -4,7 +4,7 @@
 
 Migrating from bookbag to antora
 
-. Emits a nav.adoc file from the modules.yaml file:
+. Emits to STDOUT a nav.adoc file from the modules.yaml file:
 +
 `b2s.pl`:: Converts bookbag `/workhop/modules.yaml` to antora `nav.adoc`
 +
@@ -14,9 +14,11 @@ Migrating from bookbag to antora
 ----
 
 . Fix variable names.
-Convert the % to {} in your bookbag source files:
+Convert the `%var_name%` to `{var_name}` in your bookbag source files:
 +
 `adoc_percent2brace.sh`:: For the list of vars, change the percent signs to curly braces.
++
+CAUTION: You'll have to edit this file for paths, etc.
 
 . Move adoc and image files from `/workshop/content` to `modules/ROOT`.
 Also resizes images and generates site.
